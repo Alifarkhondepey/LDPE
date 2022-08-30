@@ -1,0 +1,644 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PolymersMatricesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Branch">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MatId" Type="int" />
+          <Property Name="BP" Type="int" Nullable="false" />
+          <Property Name="BL" Type="int" Nullable="false" />
+          <Property Name="CC" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BranchOnBranch">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bl" Type="int" Nullable="false" />
+          <Property Name="bp" Type="int" Nullable="false" />
+          <Property Name="IdBranch" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="D">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdentityNo" Type="int" Nullable="false" />
+          <Property Name="CL" Type="int" Nullable="false" />
+          <Property Name="NB" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Dprime">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdentityNo" Type="int" Nullable="false" />
+          <Property Name="CL" Type="int" Nullable="false" />
+          <Property Name="NB" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Kexp">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Kexp1" Type="float" />
+          <Property Name="Kexp2" Type="float" />
+          <Property Name="Kexp3" Type="float" />
+          <Property Name="Kexp4" Type="float" />
+          <Property Name="Kexp5" Type="float" />
+          <Property Name="Kexp6" Type="float" />
+          <Property Name="Kexp7" Type="float" />
+          <Property Name="Kexp8" Type="float" />
+          <Property Name="Kexp9" Type="float" />
+          <Property Name="Kexp10" Type="float" />
+          <Property Name="Kexp11" Type="float" />
+          <Property Name="Kexp12" Type="float" />
+          <Property Name="Kexp13" Type="float" />
+          <Property Name="Kexp14" Type="float" />
+          <Property Name="Kexp15" Type="float" />
+        </EntityType>
+        <EntityType Name="KMC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KMC1" Type="float" />
+          <Property Name="KMC2" Type="float" />
+          <Property Name="KMC3" Type="float" />
+          <Property Name="KMC4" Type="float" />
+          <Property Name="KMC5" Type="float" />
+          <Property Name="KMC6" Type="float" />
+          <Property Name="KMC7" Type="float" />
+          <Property Name="KMC8" Type="float" />
+          <Property Name="KMC9" Type="float" />
+          <Property Name="KMC10" Type="float" />
+          <Property Name="KMC11" Type="float" />
+          <Property Name="KMC12" Type="float" />
+          <Property Name="KMC13" Type="float" />
+          <Property Name="KMC14" Type="float" />
+          <Property Name="KMC15" Type="float" />
+        </EntityType>
+        <EntityType Name="N">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="NIA" Type="float" />
+          <Property Name="NIC" Type="float" />
+          <Property Name="NIS" Type="float" />
+          <Property Name="NM" Type="float" />
+          <Property Name="NR" Type="float" />
+          <Property Name="NCTA" Type="float" />
+          <Property Name="NP" Type="float" />
+          <Property Name="NPsec" Type="float" />
+          <Property Name="NPtert" Type="float" />
+          <Property Name="ND" Type="float" />
+          <Property Name="NDprime" Type="float" />
+          <Property Name="NSCB" Type="float" />
+          <Property Name="NLCB" Type="float" />
+        </EntityType>
+        <EntityType Name="P">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdentityNo" Type="int" Nullable="false" />
+          <Property Name="CL" Type="int" Nullable="false" />
+          <Property Name="NB" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prk">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Prk1" Type="float" />
+          <Property Name="Prk2" Type="float" />
+          <Property Name="Prk3" Type="float" />
+          <Property Name="Prk4" Type="float" />
+          <Property Name="Prk5" Type="float" />
+          <Property Name="Prk6" Type="float" />
+          <Property Name="Prk7" Type="float" />
+          <Property Name="Prk8" Type="float" />
+          <Property Name="Prk9" Type="float" />
+          <Property Name="Prk10" Type="float" />
+          <Property Name="Prk11" Type="float" />
+          <Property Name="Prk12" Type="float" />
+          <Property Name="Prk13" Type="float" />
+          <Property Name="Prk14" Type="float" />
+          <Property Name="Prk15" Type="float" />
+        </EntityType>
+        <EntityType Name="Psec">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdentityNo" Type="int" Nullable="false" />
+          <Property Name="CL" Type="int" Nullable="false" />
+          <Property Name="NB" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ptert">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdentityNo" Type="int" Nullable="false" />
+          <Property Name="CL" Type="int" Nullable="false" />
+          <Property Name="NB" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ReactionNumber">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ReactionNumber" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RMC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RMC1" Type="float" />
+          <Property Name="RMC2" Type="float" />
+          <Property Name="RMC3" Type="float" />
+          <Property Name="RMC4" Type="float" />
+          <Property Name="RMC5" Type="float" />
+          <Property Name="RMC6" Type="float" />
+          <Property Name="RMC7" Type="float" />
+          <Property Name="RMC8" Type="float" />
+          <Property Name="RMC9" Type="float" />
+          <Property Name="RMC10" Type="float" />
+          <Property Name="RMC11" Type="float" />
+          <Property Name="RMC12" Type="float" />
+          <Property Name="RMC13" Type="float" />
+          <Property Name="RMC14" Type="float" />
+          <Property Name="RMC15" Type="float" />
+          <Property Name="SumRMC" Type="float" />
+        </EntityType>
+        <Association Name="FK_BranchOnBranch_Branch">
+          <End Role="Branch" Type="Self.Branch" Multiplicity="1" />
+          <End Role="BranchOnBranch" Type="Self.BranchOnBranch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Branch">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BranchOnBranch">
+              <PropertyRef Name="IdBranch" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PolymersMatricesModelStoreContainer">
+          <EntitySet Name="Branch" EntityType="Self.Branch" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BranchOnBranch" EntityType="Self.BranchOnBranch" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="D" EntityType="Self.D" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Dprime" EntityType="Self.Dprime" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kexp" EntityType="Self.Kexp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KMC" EntityType="Self.KMC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="N" EntityType="Self.N" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="P" EntityType="Self.P" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Prk" EntityType="Self.Prk" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Psec" EntityType="Self.Psec" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ptert" EntityType="Self.Ptert" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ReactionNumber" EntityType="Self.ReactionNumber" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RMC" EntityType="Self.RMC" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_BranchOnBranch_Branch" Association="Self.FK_BranchOnBranch_Branch">
+            <End Role="Branch" EntitySet="Branch" />
+            <End Role="BranchOnBranch" EntitySet="BranchOnBranch" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PolymersMatricesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Branch">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MatId" Type="Int32" />
+          <Property Name="BP" Type="Int32" Nullable="false" />
+          <Property Name="BL" Type="Int32" Nullable="false" />
+          <Property Name="CC" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BranchOnBranches" Relationship="Self.FK_BranchOnBranch_Branch" FromRole="Branch" ToRole="BranchOnBranch" />
+        </EntityType>
+        <EntityType Name="BranchOnBranch">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bl" Type="Int32" Nullable="false" />
+          <Property Name="bp" Type="Int32" Nullable="false" />
+          <Property Name="IdBranch" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Branch" Relationship="Self.FK_BranchOnBranch_Branch" FromRole="BranchOnBranch" ToRole="Branch" />
+        </EntityType>
+        <EntityType Name="D">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdentityNo" Type="Int32" Nullable="false" />
+          <Property Name="CL" Type="Int32" Nullable="false" />
+          <Property Name="NB" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Dprime">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdentityNo" Type="Int32" Nullable="false" />
+          <Property Name="CL" Type="Int32" Nullable="false" />
+          <Property Name="NB" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Kexp">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Kexp1" Type="Double" />
+          <Property Name="Kexp2" Type="Double" />
+          <Property Name="Kexp3" Type="Double" />
+          <Property Name="Kexp4" Type="Double" />
+          <Property Name="Kexp5" Type="Double" />
+          <Property Name="Kexp6" Type="Double" />
+          <Property Name="Kexp7" Type="Double" />
+          <Property Name="Kexp8" Type="Double" />
+          <Property Name="Kexp9" Type="Double" />
+          <Property Name="Kexp10" Type="Double" />
+          <Property Name="Kexp11" Type="Double" />
+          <Property Name="Kexp12" Type="Double" />
+          <Property Name="Kexp13" Type="Double" />
+          <Property Name="Kexp14" Type="Double" />
+          <Property Name="Kexp15" Type="Double" />
+        </EntityType>
+        <EntityType Name="KMC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KMC1" Type="Double" />
+          <Property Name="KMC2" Type="Double" />
+          <Property Name="KMC3" Type="Double" />
+          <Property Name="KMC4" Type="Double" />
+          <Property Name="KMC5" Type="Double" />
+          <Property Name="KMC6" Type="Double" />
+          <Property Name="KMC7" Type="Double" />
+          <Property Name="KMC8" Type="Double" />
+          <Property Name="KMC9" Type="Double" />
+          <Property Name="KMC10" Type="Double" />
+          <Property Name="KMC11" Type="Double" />
+          <Property Name="KMC12" Type="Double" />
+          <Property Name="KMC13" Type="Double" />
+          <Property Name="KMC14" Type="Double" />
+          <Property Name="KMC15" Type="Double" />
+        </EntityType>
+        <EntityType Name="N">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="NIA" Type="Double" />
+          <Property Name="NIC" Type="Double" />
+          <Property Name="NIS" Type="Double" />
+          <Property Name="NM" Type="Double" />
+          <Property Name="NR" Type="Double" />
+          <Property Name="NCTA" Type="Double" />
+          <Property Name="NP" Type="Double" />
+          <Property Name="NPsec" Type="Double" />
+          <Property Name="NPtert" Type="Double" />
+          <Property Name="ND" Type="Double" />
+          <Property Name="NDprime" Type="Double" />
+          <Property Name="NSCB" Type="Double" />
+          <Property Name="NLCB" Type="Double" />
+        </EntityType>
+        <EntityType Name="P">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdentityNo" Type="Int32" Nullable="false" />
+          <Property Name="CL" Type="Int32" Nullable="false" />
+          <Property Name="NB" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Prk">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Prk1" Type="Double" />
+          <Property Name="Prk2" Type="Double" />
+          <Property Name="Prk3" Type="Double" />
+          <Property Name="Prk4" Type="Double" />
+          <Property Name="Prk5" Type="Double" />
+          <Property Name="Prk6" Type="Double" />
+          <Property Name="Prk7" Type="Double" />
+          <Property Name="Prk8" Type="Double" />
+          <Property Name="Prk9" Type="Double" />
+          <Property Name="Prk10" Type="Double" />
+          <Property Name="Prk11" Type="Double" />
+          <Property Name="Prk12" Type="Double" />
+          <Property Name="Prk13" Type="Double" />
+          <Property Name="Prk14" Type="Double" />
+          <Property Name="Prk15" Type="Double" />
+        </EntityType>
+        <EntityType Name="Psec">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdentityNo" Type="Int32" Nullable="false" />
+          <Property Name="CL" Type="Int32" Nullable="false" />
+          <Property Name="NB" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ptert">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdentityNo" Type="Int32" Nullable="false" />
+          <Property Name="CL" Type="Int32" Nullable="false" />
+          <Property Name="NB" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ReactionNumber">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReactionNumber1" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RMC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RMC1" Type="Double" />
+          <Property Name="RMC2" Type="Double" />
+          <Property Name="RMC3" Type="Double" />
+          <Property Name="RMC4" Type="Double" />
+          <Property Name="RMC5" Type="Double" />
+          <Property Name="RMC6" Type="Double" />
+          <Property Name="RMC7" Type="Double" />
+          <Property Name="RMC8" Type="Double" />
+          <Property Name="RMC9" Type="Double" />
+          <Property Name="RMC10" Type="Double" />
+          <Property Name="RMC11" Type="Double" />
+          <Property Name="RMC12" Type="Double" />
+          <Property Name="RMC13" Type="Double" />
+          <Property Name="RMC14" Type="Double" />
+          <Property Name="RMC15" Type="Double" />
+          <Property Name="SumRMC" Type="Double" />
+        </EntityType>
+        <Association Name="FK_BranchOnBranch_Branch">
+          <End Role="Branch" Type="Self.Branch" Multiplicity="1" />
+          <End Role="BranchOnBranch" Type="Self.BranchOnBranch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Branch">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BranchOnBranch">
+              <PropertyRef Name="IdBranch" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PolymersMatrices" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Branches" EntityType="Self.Branch" />
+          <EntitySet Name="BranchOnBranches" EntityType="Self.BranchOnBranch" />
+          <EntitySet Name="D" EntityType="Self.D" />
+          <EntitySet Name="Dprimes" EntityType="Self.Dprime" />
+          <EntitySet Name="Kexps" EntityType="Self.Kexp" />
+          <EntitySet Name="KMCs" EntityType="Self.KMC" />
+          <EntitySet Name="N" EntityType="Self.N" />
+          <EntitySet Name="P" EntityType="Self.P" />
+          <EntitySet Name="Prks" EntityType="Self.Prk" />
+          <EntitySet Name="Psecs" EntityType="Self.Psec" />
+          <EntitySet Name="Pterts" EntityType="Self.Ptert" />
+          <EntitySet Name="ReactionNumbers" EntityType="Self.ReactionNumber" />
+          <EntitySet Name="RMCs" EntityType="Self.RMC" />
+          <AssociationSet Name="FK_BranchOnBranch_Branch" Association="Self.FK_BranchOnBranch_Branch">
+            <End Role="Branch" EntitySet="Branches" />
+            <End Role="BranchOnBranch" EntitySet="BranchOnBranches" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PolymersMatricesModelStoreContainer" CdmEntityContainer="PolymersMatrices">
+          <EntitySetMapping Name="Branches">
+            <EntityTypeMapping TypeName="PolymersMatricesModel.Branch">
+              <MappingFragment StoreEntitySet="Branch">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MatId" ColumnName="MatId" />
+                <ScalarProperty Name="BP" ColumnName="BP" />
+                <ScalarProperty Name="BL" ColumnName="BL" />
+                <ScalarProperty Name="CC" ColumnName="CC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BranchOnBranches">
+            <EntityTypeMapping TypeName="PolymersMatricesModel.BranchOnBranch">
+              <MappingFragment StoreEntitySet="BranchOnBranch">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="bl" ColumnName="bl" />
+                <ScalarProperty Name="bp" ColumnName="bp" />
+                <ScalarProperty Name="IdBranch" ColumnName="IdBranch" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="D">
+            <EntityTypeMapping TypeName="PolymersMatricesModel.D">
+              <MappingFragment StoreEntitySet="D">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdentityNo" ColumnName="IdentityNo" />
+                <ScalarProperty Name="CL" ColumnName="CL" />
+                <ScalarProperty Name="NB" ColumnName="NB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Dprimes">
+            <EntityTypeMapping TypeName="PolymersMatricesModel.Dprime">
+              <MappingFragment StoreEntitySet="Dprime">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdentityNo" ColumnName="IdentityNo" />
+                <ScalarProperty Name="CL" ColumnName="CL" />
+                <ScalarProperty Name="NB" ColumnName="NB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kexps">
+            <EntityTypeMapping TypeName="PolymersMatricesModel.Kexp">
+              <MappingFragment StoreEntitySet="Kexp">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Kexp1" ColumnName="Kexp1" />
+                <ScalarProperty Name="Kexp2" ColumnName="Kexp2" />
+                <ScalarProperty Name="Kexp3" ColumnName="Kexp3" />
+                <ScalarProperty Name="Kexp4" ColumnName="Kexp4" />
+                <ScalarProperty Name="Kexp5" ColumnName="Kexp5" />
+                <ScalarProperty Name="Kexp6" ColumnName="Kexp6" />
+                <ScalarProperty Name="Kexp7" ColumnName="Kexp7" />
+                <ScalarProperty Name="Kexp8" ColumnName="Kexp8" />
+                <ScalarProperty Name="Kexp9" ColumnName="Kexp9" />
+                <ScalarProperty Name="Kexp10" ColumnName="Kexp10" />
+                <ScalarProperty Name="Kexp11" ColumnName="Kexp11" />
+                <ScalarProperty Name="Kexp12" ColumnName="Kexp12" />
+                <ScalarProperty Name="Kexp13" ColumnName="Kexp13" />
+                <ScalarProperty Name="Kexp14" ColumnName="Kexp14" />
+                <ScalarProperty Name="Kexp15" ColumnName="Kexp15" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KMCs">
+            <EntityTypeMapping TypeName="PolymersMatricesModel.KMC">
+              <MappingFragment StoreEntitySet="KMC">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="KMC1" ColumnName="KMC1" />
+                <ScalarProperty Name="KMC2" ColumnName="KMC2" />
+                <ScalarProperty Name="KMC3" ColumnName="KMC3" />
+                <ScalarProperty Name="KMC4" ColumnName="KMC4" />
+                <ScalarProperty Name="KMC5" ColumnName="KMC5" />
+                <ScalarProperty Name="KMC6" ColumnName="KMC6" />
+                <ScalarProperty Name="KMC7" ColumnName="KMC7" />
+                <ScalarProperty Name="KMC8" ColumnName="KMC8" />
+                <ScalarProperty Name="KMC9" ColumnName="KMC9" />
+                <ScalarProperty Name="KMC10" ColumnName="KMC10" />
+                <ScalarProperty Name="KMC11" ColumnName="KMC11" />
+                <ScalarProperty Name="KMC12" ColumnName="KMC12" />
+                <ScalarProperty Name="KMC13" ColumnName="KMC13" />
+                <ScalarProperty Name="KMC14" ColumnName="KMC14" />
+                <ScalarProperty Name="KMC15" ColumnName="KMC15" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="N">
+            <EntityTypeMapping TypeName="PolymersMatricesModel.N">
+              <MappingFragment StoreEntitySet="N">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NIA" ColumnName="NIA" />
+                <ScalarProperty Name="NIC" ColumnName="NIC" />
+                <ScalarProperty Name="NIS" ColumnName="NIS" />
+                <ScalarProperty Name="NM" ColumnName="NM" />
+                <ScalarProperty Name="NR" ColumnName="NR" />
+                <ScalarProperty Name="NCTA" ColumnName="NCTA" />
+                <ScalarProperty Name="NP" ColumnName="NP" />
+                <ScalarProperty Name="NPsec" ColumnName="NPsec" />
+                <ScalarProperty Name="NPtert" ColumnName="NPtert" />
+                <ScalarProperty Name="ND" ColumnName="ND" />
+                <ScalarProperty Name="NDprime" ColumnName="NDprime" />
+                <ScalarProperty Name="NSCB" ColumnName="NSCB" />
+                <ScalarProperty Name="NLCB" ColumnName="NLCB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="P">
+            <EntityTypeMapping TypeName="PolymersMatricesModel.P">
+              <MappingFragment StoreEntitySet="P">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdentityNo" ColumnName="IdentityNo" />
+                <ScalarProperty Name="CL" ColumnName="CL" />
+                <ScalarProperty Name="NB" ColumnName="NB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prks">
+            <EntityTypeMapping TypeName="PolymersMatricesModel.Prk">
+              <MappingFragment StoreEntitySet="Prk">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Prk1" ColumnName="Prk1" />
+                <ScalarProperty Name="Prk2" ColumnName="Prk2" />
+                <ScalarProperty Name="Prk3" ColumnName="Prk3" />
+                <ScalarProperty Name="Prk4" ColumnName="Prk4" />
+                <ScalarProperty Name="Prk5" ColumnName="Prk5" />
+                <ScalarProperty Name="Prk6" ColumnName="Prk6" />
+                <ScalarProperty Name="Prk7" ColumnName="Prk7" />
+                <ScalarProperty Name="Prk8" ColumnName="Prk8" />
+                <ScalarProperty Name="Prk9" ColumnName="Prk9" />
+                <ScalarProperty Name="Prk10" ColumnName="Prk10" />
+                <ScalarProperty Name="Prk11" ColumnName="Prk11" />
+                <ScalarProperty Name="Prk12" ColumnName="Prk12" />
+                <ScalarProperty Name="Prk13" ColumnName="Prk13" />
+                <ScalarProperty Name="Prk14" ColumnName="Prk14" />
+                <ScalarProperty Name="Prk15" ColumnName="Prk15" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Psecs">
+            <EntityTypeMapping TypeName="PolymersMatricesModel.Psec">
+              <MappingFragment StoreEntitySet="Psec">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdentityNo" ColumnName="IdentityNo" />
+                <ScalarProperty Name="CL" ColumnName="CL" />
+                <ScalarProperty Name="NB" ColumnName="NB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pterts">
+            <EntityTypeMapping TypeName="PolymersMatricesModel.Ptert">
+              <MappingFragment StoreEntitySet="Ptert">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdentityNo" ColumnName="IdentityNo" />
+                <ScalarProperty Name="CL" ColumnName="CL" />
+                <ScalarProperty Name="NB" ColumnName="NB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ReactionNumbers">
+            <EntityTypeMapping TypeName="PolymersMatricesModel.ReactionNumber">
+              <MappingFragment StoreEntitySet="ReactionNumber">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ReactionNumber1" ColumnName="ReactionNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RMCs">
+            <EntityTypeMapping TypeName="PolymersMatricesModel.RMC">
+              <MappingFragment StoreEntitySet="RMC">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="RMC1" ColumnName="RMC1" />
+                <ScalarProperty Name="RMC2" ColumnName="RMC2" />
+                <ScalarProperty Name="RMC3" ColumnName="RMC3" />
+                <ScalarProperty Name="RMC4" ColumnName="RMC4" />
+                <ScalarProperty Name="RMC5" ColumnName="RMC5" />
+                <ScalarProperty Name="RMC6" ColumnName="RMC6" />
+                <ScalarProperty Name="RMC7" ColumnName="RMC7" />
+                <ScalarProperty Name="RMC8" ColumnName="RMC8" />
+                <ScalarProperty Name="RMC9" ColumnName="RMC9" />
+                <ScalarProperty Name="RMC10" ColumnName="RMC10" />
+                <ScalarProperty Name="RMC11" ColumnName="RMC11" />
+                <ScalarProperty Name="RMC12" ColumnName="RMC12" />
+                <ScalarProperty Name="RMC13" ColumnName="RMC13" />
+                <ScalarProperty Name="RMC14" ColumnName="RMC14" />
+                <ScalarProperty Name="RMC15" ColumnName="RMC15" />
+                <ScalarProperty Name="SumRMC" ColumnName="SumRMC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
